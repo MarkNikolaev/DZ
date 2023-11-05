@@ -1,0 +1,36 @@
+q=int(input("Введите длинну списка"))
+a=[]
+try:
+  int(q)
+except:
+  print("Всё плохо")
+  quit()
+for m in range(int(q)):
+  z=input()
+  try:
+    int(z)
+  except:
+    print("Неправильный тип данных")
+    quit()
+  a.append(int(z))
+s=int(input("Введите искомое число"))
+try:
+  int(s)
+except:
+  print("Всё плохо")
+  quit()
+a.sort()
+y=0
+u=len(a)-1
+for i in range(len(a)):
+  if a[y]+a[u]==s:
+    print(a[y],a[u])
+    quit()
+  else:
+    if a[y]+a[u]>s:
+      u-=1
+    else:
+      y+=1
+  if u-y>=0:
+    print("Нету")
+    break
