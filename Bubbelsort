@@ -4,7 +4,7 @@ try:
   int(q)
 except:
   print("Всё плохо")
-  quet()
+  quit()
 for m in range(int(q)):
   z=input()
   try:
